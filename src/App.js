@@ -1,23 +1,24 @@
-import React from "react";
-
+import React, { Component } from "react";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="container-fluid">
-      <header className="App-header">
-        <h4>To Do List</h4>
-      </header>
+// import Content from './Content/Content';
+import Footer from "./Shared/Footer/Footer";
+import Heading from "./Shared/Heading/Heading";
 
+class App extends Component {
+  render() {
+    return (
       <div>
-      
+        <header>
+          <Heading />
+        </header>
+
+        <footer>
+          <Footer />
+        </footer>
       </div>
-
-      <footer className="App-header">
-
-      </footer>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+import List from './List';
+
 import "./Todo.css";
 
 // npm install uuid (randomId generator)
@@ -66,5 +69,23 @@ class Todo extends Component {
       </div>
     );
   }
+  handleOnChange = e => {
+    const { target: { value } } = e;
+
+    // Updating our task state with the input value...
+    this.setState({
+      task: value
+    });
+  }
 }
 export default Todo;
+
+
+/*
+Our JSX is divided into two parts. 
+The first one is a form with an input that is connected to our local state (this.state.task), 
+and we will save the task when the user submits the form (onSubmit). 
+The second part is the component list where we are going to display our Todo list (or tasks list), 
+passing the items array and the markAsCompleted (to mark a task as a completed) and 
+removeTask (to remove the task from the list) functions.
+*/

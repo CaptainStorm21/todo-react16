@@ -1,0 +1,9 @@
+.heading {
+    position: fixed; 
+    top: 20px; 
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    text-align: center;
+ }
+
